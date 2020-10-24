@@ -23,24 +23,51 @@ var getWork = function () {
         work = fullWork
 
 
-        //create the work and match with the hour
+        //for each row keep the value entered
         $.each(work, function (hour, work) {
             console.log('work')
             var hourDiv = $()
             createWork(work, hourDiv);
         })
-
+        //check the times
         auditWork()
 
     }
 }
 
+//put  and keep work in the correct hour
 var createWork = function (workText, hourDiv) {
+
     var workDiv = workDiv.find('.task');
     var workP = $('<p>')
         .addClass('description')
+        .text(workText)
+    workDiv.html(workP);
 
 }
+
+//update background of each row depending on time
+var auditWork = function () {
+console.log ("auditWork")
+    var curentHour = moment().hour();
+    $('.work-info').each(function () {
+        var elementHour = parseInt($(this).attr('id'));
+
+        //keeps the color greyed-out "its all in the past baby"
+        if (elementHour < currentHour) {
+            $(this).removeClass(['present', 'future']).addClass('past');
+        }
+        //keeps the color red for "stop"
+        else if (elementHour === currentHour) {
+            $(this).removeClass()(['past', 'future']).addClass('present');
+        }
+        //keeps the color Green for "go"
+        else {
+            $(this).removeClass(['past', 'present']).addClass('future');
+        }
+    })
+};
+
 
 
 
