@@ -7,15 +7,19 @@ body {
 textarea{
   background: transparent;
   border: none;
-  resize: none;
+  line-height: 24px;
+  width:745px;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+ 
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
+  background-image: url("./Assets/IMG_6090.jpeg");
+  background-size: cover;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -33,9 +37,9 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-  background-color: pink;
+  height: 70px;
+  border-top: 1px solid white;   
+   
 }
 
 .hour {
@@ -77,4 +81,19 @@ font-size: large;
 text-align:center;
 }
 
-  
+h2{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+body {
+  background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+footer {
+  background-color: rgb(146, 74, 126);
+}
