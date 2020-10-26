@@ -17,7 +17,7 @@ var setWork = function () {
 
 //persist the data to local storage
 var getWork = function () {
-    console.log('getWork')
+
     var fullWork = JSON.parse; (localStorage.getItem('work'));
     if (fullWork) {
         work = fullWork
@@ -25,9 +25,9 @@ var getWork = function () {
         console.log("getWork")
 
         //for each row keep the value entered
-        $.each(work, (hour, work) => {
+        $.each(work, (_hour, work) => {
             var hourDiv = $();
-            console.log("hourDiv");
+
             createWork(work, hourDiv);
         })
 
@@ -51,7 +51,7 @@ var createWork = function (workText, hourDiv) {
 //update background  color of each row depending on time
 var auditWork = function () {
     console.log("auditWork")
-    var curentHour = moment().hour();
+    var currentHour = moment().hour();
     $('.work-info').each(function () {
         var elementHour = parseInt($(this).attr(''));
 
@@ -70,56 +70,7 @@ var auditWork = function () {
             console.log("elementHour: ", elementHour)
         }
     })
-};
-
-//local storage for when text is entered on the calendar
-
-// var replaceTextarea = function (textareaElement) {
-
-//     //Pulls the elements in order to put time and notations together
-//     var workInfo = textareaElement.closest(".work-info");
-//     var textArea = workInfo.find('textarea');
-
-//     //get the time and notations together
-//     var time = workInfo.attr('');
-//     var work = textArea.vail().trim();
-
-//     //stores the data in the system
-//     work[time] = [text];
-//     setWork();
-
-//     //replace the textarea element with a p 
-//     createWork(work, workInfo);
-// }
+}
 
 
 
-
-
-//load tasks from local storage and create tasks in row
-
-// //create a task for each key/value pair
-//make sure the past current and future time is reflected in color
-
-//make a task for each row that goes with each hour
-
-
-
-//update the background of each row based on the time
-
-//create local storage
-
-
-// Put the object into storage
-
-
-// Retrieve the object from storage
-
-
-
-
-//click handelrs
-
-//button
-
-//update backgrounds 

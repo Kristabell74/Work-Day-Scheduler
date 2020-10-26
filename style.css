@@ -2,6 +2,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+    background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 textarea{
@@ -86,14 +91,7 @@ h2{
   font-size: 24px;
 }
 
-body {
-  background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
 
 footer {
-  background-color: rgb(146, 74, 126);
+  background-color: rgb(170, 115, 94);
 }
