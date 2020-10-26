@@ -40,13 +40,6 @@ document.getElementById("input").addEventListener("click", function () {
 
 // //when click the save button
 
-// $("work").click(function () {
-
-//     //saves the work if the button has been clicked 
-//     $("textarea").each(function () {
-//         replaceTextarea = ($(this));
-
-//     })
 
 //     //this is keeping information with the time at the click of the button if it has changed
 //     var time = $(this).closest("work").attribute("id");
