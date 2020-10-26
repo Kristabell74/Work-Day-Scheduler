@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bolder;
   line-height: 1;
     background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
