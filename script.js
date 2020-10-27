@@ -3,7 +3,7 @@
 var todaysDate = moment();
 $("#currentDay").text(todaysDate.format('MMMM Do YYYY, h:mm:ss a'));
 
-//objects with variables to put data in order to sort the work locally
+//work is the variable the times are objects and each object holds and array that needs to be filled
 var work = {
     "8:00 am": [], "9:00 am": [], "10:00 am": [], "11:00 am": [], "12:00 pm": [], "01:00 pm": [], "02:00 pm": [], "03:00 pm": [], "04:00 pm": [], "05:00 pm": []
 };
@@ -11,12 +11,12 @@ var work = {
 //add work to local storage
 var setWork = function () {
 
-    localStorage.setItem("work", JSON.stringify(work));
+    localStorage.setItem("setWork", JSON.stringify(work));
 }
 
 
 // this adds the value of the textarea to the w,ork variable
-var saveBtn = input.getElementById("work");
+var saveBtn = getElementById("saveBtn");
 localStorage.setItem("work", input.value());
 
 //This tells the computer to save the work when the save button is clicked
