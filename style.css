@@ -3,11 +3,11 @@ body {
   font-size: 20px;
   font-weight: bolder;
   line-height: 1;
-    background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
+    /* background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover; */
 }
 
 textarea{

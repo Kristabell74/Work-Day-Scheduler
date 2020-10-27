@@ -25,4 +25,13 @@
 //     localStorage.setItem("user", user);
 
 // }, false);
+// var getWork = localStorage.getItem('work');
 
+// console.log('work',JSON.parse(retrieveObject));
+
+// //gets work from local storage when window opens
+// $(window).focus(function(){
+//     console.log(localStorage.getItem('work'))
+
+//     }
+// }
