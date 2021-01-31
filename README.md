@@ -10,9 +10,10 @@ Installation:
 
 A repository was created in Github. Then using the terminal for the Work-Day-Schedular. homework. As I worked I would push the information into Github
 
-GitHub Link: 
+GitHub Link: https://github.com/Kristabell74/Work-Day-Scheduler.git
 
 Usage:
+To make a hourly schedular to use to keep track of a daily schedule.
 
 Credits:
 https://www.w3schools.com/html/html_form_elements.asp
