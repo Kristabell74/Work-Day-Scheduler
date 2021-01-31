@@ -10,6 +10,7 @@ Installation:
 
 A repository was created in Github. Then using the terminal for the Work-Day-Schedular. homework. As I worked I would push the information into Github
 
+GitHub Link: 
 
 Usage:
 
