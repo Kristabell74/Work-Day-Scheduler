@@ -3,18 +3,18 @@ body {
   font-size: 20px;
   font-weight: bolder;
   line-height: 1;
-    /* background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
+   background: url(./Assets/IMG_6090.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover; */
-}
+    -o-background-size: cover;
+} */
 
 textarea{
   background: transparent;
   border: none;
   line-height: 24px;
-  width:745px;
+  width:100px;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
@@ -94,5 +94,7 @@ h2{
 
 
 footer {
-  background-color: rgb(170, 115, 94);
+  background-color: rgb(240, 214, 203);
+  font-weight: bold;
+
 }

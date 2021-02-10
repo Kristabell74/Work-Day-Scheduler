@@ -1,4 +1,4 @@
-
+var input = document.getElementsByClassName("input-area")
 //date and time
 var todaysDate = moment();
 $("#currentDay").text(todaysDate.format('MMMM Do YYYY, h:mm:ss a'));
@@ -17,17 +17,19 @@ var setWork = function () {
 
 
 // this adds the value of the textarea to the work variable//Do not change it screws with the time
-var saveBtn = getElementById(".currentText")
+var saveBtn = document.getElementsByClassName("currentText")
+console.log("input", input)
+localStorage.setItem("work", input.value(work));
 
-localStorage.setItem("work", input.value());
+console.log(work)
 
-
-//This tells the computer to save the work when the save button is clicked
-document.getElementById("work").addEventListener("click", function () {
+//This tells the computer to save the work when the save button is clicked//Do not delete screws with time
+document.getElementById("saveBtn").addEventListener("click", function () {
 
     //save the current hour and the text area together
-    var user = document.getElementById(".current hour", ".currentText", Json.stringify(work)).value;
+    var user = document.getElementById(".current hour", "currentText", Json.stringify(work)).value;
     console.log(currentTime)
+
     //local storage of the user 
     localStorage.setItem("user", user);
 
@@ -53,9 +55,6 @@ Array.from(rows).forEach(row => {
         else if (currentHour > rowHour) {
             setColor(row, "lightgrey");
         }
-        else {
-            setColor(currentHour, "clear");
-        }
 
     }
 });
@@ -69,6 +68,7 @@ var getWork = localStorage.getItem('work'); {
     window.opener.sessionStorage.setItem('work');
 }
 
+
 //Clear the scedule for the new day at midnight
 var clearScheduler = localStorage("work")
 function roundMidnight() {
@@ -76,34 +76,5 @@ function roundMidnight() {
     setTimeout(roundMidnight, timeToMidnight());
 
 }
-
-
-
-
-
-
-
-
-// //when click the save button
-
-
-//     //this is keeping information with the time at the click of the button if it has changed
-//
-//         //this is the click feature for the button 
-//  
-
-//         //click the button to save any input
-
-// //save button click it in order to save information
-
-
-
-//     //keep track of time 
-//     //when time is past change the hour on calendar that is on the hour and in the future
-
-//     //get the current work and the future work and calendar all 
-
-
-
 
 
