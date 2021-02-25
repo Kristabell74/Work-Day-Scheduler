@@ -11,7 +11,7 @@ A repository was created in Github. Then using the terminal for the Work-Day-Sch
 
 ### Links:
 
-Git hub link:
+Git hub link: https://github.com/Kristabell74/Work-Day-Scheduler.git
 
 WebPage:
 
