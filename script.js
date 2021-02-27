@@ -1,12 +1,43 @@
+var getWork = localStorage.getItem('work');
 var input = document.getElementsByClassName("input-group")
 //date and time
 var todaysDate = moment();
+
+var hour = todaysDate.hour();
+if (hour < 12) {
+    hour = "am" + hour;
+} else if (hour > 12) {
+    hour = "pm" + (hour - 12)
+} else {
+    hour = "pm12"
+}
+
 $("#currentDay").text(todaysDate.format('MMMM Do YYYY, h:mm:ss a'));
 
 //work is the variable the times are objects properties that have been assigned arrays
 var work = {
-    "08:00 am": "", "09:00 am": "", "10:00 am": "", "11:00 am": "", "12:00 pm": "", "01:00 pm": "", "02:00 pm": "", "03:00 pm": "", "04:00 pm": "", "05:00 pm": ""
+    "am8": "", "am9": "", "am10": "", "am11": "", "pm12": "", "pm1": "", "pm2": "", "pm3": "", "pm4": "", "pm5": ""
 };
+
+//Gets the work from the Calendar when opened
+if (getWork) {
+    work = JSON.parse(getWork);
+}
+var textareas = document.querySelectorAll("textarea");
+var classname = "past";
+for (let i = 0; i < textareas.length; i++) {
+    let textarea = textareas[i];
+    let id = textarea.id;
+    if (id === hour) {
+        classname = "present";
+    } else if (classname === "present") {
+        classname = "future";
+
+    }
+    //pulls the data down to the id in the text area
+    textarea.value = work[id];
+    textarea.classList.add(classname)
+}
 
 
 //add work to local storage
@@ -30,7 +61,7 @@ function handleclick(e) {
     let textarea = btn.previousElementSibling;
     let text = textarea.value;
     let span = textarea.previousElementSibling;
-    let hour = span.textContent;
+    let hour = textarea.id;
 
     work[hour] = text;
     //local storage of the user 
@@ -40,39 +71,7 @@ function handleclick(e) {
 }
 
 
-// //constant value 
-// const container4 = document.getElementsByClass("work");
-// let currentHour = parseInt(moment().format('H'));
-// //sets the colors for each row based on time
-// Array.from(container4).forEach(container4 => {
-//     let
-//         container4IdString = container4.id,
-//         container4Hour = parseInt(container4IdString)
-
-//     if (container4Hour) {
-//         if (currentHour === container4Hour) {
-//             setColor(container4, "red");
-//         }
-//         else if (currentHour < container4Hour) {
-//             setColor(container4, "green");
-//         }
-//         else if (container4Hour > container4Hour) {
-//             setColor(contaner4, "lightgrey");
-//         }
-
-//     }
-// });
-
-// //gets work from local storage when window opens
-// var getWork = localStorage.getItem('work'); {
-
-//     console.log('work', JSON.parse(retrieveObject));
-
-//     window.opener.sessionStorage.setItem('work');
-// }
-
-
-// //Clear the scedule for the new day at midnight
+//Clear the scedule for the new day at midnight
 // var clearScheduler = localStorage("work")
 // function roundMidnight() {
 //     console.log('roundmidnight')
