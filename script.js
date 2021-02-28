@@ -23,6 +23,7 @@ var work = {
 if (getWork) {
     work = JSON.parse(getWork);
 }
+
 var textareas = document.querySelectorAll("textarea");
 var classname = "past";
 for (let i = 0; i < textareas.length; i++) {
@@ -32,13 +33,12 @@ for (let i = 0; i < textareas.length; i++) {
         classname = "present";
     } else if (classname === "present") {
         classname = "future";
-
     }
+
     //pulls the data down to the id in the text area
     textarea.value = work[id];
     textarea.classList.add(classname)
 }
-
 
 //add work to local storage
 var setWork = function getElementById() {
@@ -68,7 +68,19 @@ function handleclick(e) {
 
     localStorage.setItem("work", JSON.stringify(work));
 
+    // reset on new day
+    var currentDay = moment().format("dddd, MMMM Do");
+    for (var i = 0; i < span.length; i++) {
+        if (currentDay.isAfter(span[i].date)) {
+            span[i].description = "";
+            span[i].time = "";
+            span[i].date = "";
+            span.length = 0;
+        }
+    }
 }
+
+
 
 
 //Clear the scedule for the new day at midnight
