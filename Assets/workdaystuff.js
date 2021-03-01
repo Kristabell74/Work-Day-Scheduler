@@ -102,4 +102,16 @@
 //     console.log('at midnight')
 //     setTimeout(roundMidnight, timeToMidnight());
 
-}
+//}
+
+//$('#delete').click(function () {
+    // localStorage.removeItem = ("work", JSON.parse(work));
+//    localStorage.removeItem("work");
+//});
+
+// var deleteBtn = l(work);
+//     if (work.hour === "pm6") {
+//         removeItem = JSON.parse(localStorage.removeItem(work));
+ //   }
+
+

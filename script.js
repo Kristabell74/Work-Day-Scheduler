@@ -16,7 +16,7 @@ $("#currentDay").text(todaysDate.format('MMMM Do YYYY, h:mm:ss a'));
 
 //work is the variable the times are objects properties that have been assigned arrays
 var work = {
-    "am8": "", "am9": "", "am10": "", "am11": "", "pm12": "", "pm1": "", "pm2": "", "pm3": "", "pm4": "", "pm5": ""
+    "am8": "", "am9": "", "am10": "", "am11": "", "pm12": "", "pm1": "", "pm2": "", "pm3": "", "pm4": "", "pm5": "",
 };
 
 //Gets the work from the Calendar when opened
@@ -68,27 +68,12 @@ function handleclick(e) {
 
     localStorage.setItem("work", JSON.stringify(work));
 
-    // reset on new day
-    var currentDay = moment().format("dddd, MMMM Do");
-    for (var i = 0; i < span.length; i++) {
-        if (currentDay.isAfter(span[i].date)) {
-            span[i].description = "";
-            span[i].time = "";
-            span[i].date = "";
-            span.length = 0;
-        }
-    }
-}
+
+
+};
 
 
 
 
-//Clear the scedule for the new day at midnight
-// var clearScheduler = localStorage("work")
-// function roundMidnight() {
-//     console.log('roundmidnight')
-//     setTimeout(roundMidnight, timeToMidnight());
-
-// }
 
 
